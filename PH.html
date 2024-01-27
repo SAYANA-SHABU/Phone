@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link href="style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <form action="/action_page.php" onsubmit=" return validate()">
+
+      <div>
+
+      <label for="usrname">Email Address</label>
+
+      <input type="text" id="email" name="emailaddress" required>
+
+      <span id="err1"></span>
+
+    </div>
+
+    <div>
+
+      <label for="psw">Password</label>
+
+    <input type="password" id="password" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and maximum characters" required>
+
+    <span id="err2"></span>
+
+  </div>
+
+  <div>
+
+    <label for="myform_phone">Phone Number</label>
+
+    <input type="tel" id="myform_phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required/>
+
+      
+
+    </div>
+
+      <input type="submit" value="Submit">
+
+    </form>
+
+  </div>
+
+  
+
+  <div id="message">
+
+    <h3>Password must contain the following:</h3>
+
+    <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+
+    <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+
+    <p id="number" class="invalid">A <b>number</b></p>
+
+    <p id="length" class="invalid">Maximum <b>8 characters</b></p>
+
+  </div>
+
+     
+
+    <script src="script.js"></script>  
+
+</body>
+
+</html>
